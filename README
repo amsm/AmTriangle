@@ -1,0 +1,6 @@
+# AmTriangle
+The AmTriangle meta-dataset for playing with Machine Learning
+
+AmTriangle is a meta-dataset for machine learning (ML) that supports convenient and configurable dataset production in addition to a classifier that performs supervised learning. The idea is to have a never-ending source of supervised datasets, minimizing learning barriers to ML, for training models, and facilitating educational experiments and comparisons between different workflows.
+
+It is a "meta-dataset" because it is a solution to generate sets of samples (datasets), as many as desired, correctly classified. Each sample is a triangle, classified as "acute", "obtuse" or "right", according to trigonometry. Each generated dataset can be used to "teach-by-example" how to classify new samples, by different techniques, namely K-Nearest-Neighbors and neural networks. The triangles could be other analogous objects, other tuples.
