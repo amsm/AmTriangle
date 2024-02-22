@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Triangle of Requested Type (single)</title>
+</head>
+<body>
+    <h1>Random triangle of type {{requestedTypeOfTriangle}}</h1>
+    <h2>Coordinates: {{listTriangleCoordinates}}</h2>
+
+    <img src="{{pathToStaticImageWithATriangle}}">
+
+    <hr>
+    <!--- a go back anchor -->
+    <script>
+        var referrer = document.referrer //the source URL
+        strReferrer = `<a href="${referrer}">return to ${referrer}</a>`
+        document.write(strReferrer)
+    </script>
+</body>
+</html>

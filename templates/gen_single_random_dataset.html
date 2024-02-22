@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Triangle - random dataset 01</title>
+</head>
+<body>
+    <!-- see Controlling Autoescaping in https://flask.palletsprojects.com/en/2.1.x/templating/ -->
+    {% autoescape false %}
+        {{datasetAsDictAsString}}
+    {% endautoescape %}
+
+    <hr>
+    <!--- a go back anchor -->
+    <script>
+        var referrer = document.referrer //the source URL
+        strReferrer = `<a href="${referrer}">return to ${referrer}</a>`
+        document.write(strReferrer)
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Triangle v01 - multiple triangles</title>
+</head>
+<body>
+    <h1>Random {{iHowManyTriangles}} triangles of type {{requestedTypeOfTriangle}}</h1>
+
+    {% for strTriangleCoordinates, strTriangleImageStaticPath in dictGeneratedTriangles.items() %}
+        <details>
+            <summary>{{strTriangleCoordinates}}</summary>
+            <img src="{{strTriangleImageStaticPath}}">
+        </details>
+        <hr>
+    {% endfor %}
+
+    <hr>
+    <img src="{{pStrDestinationPathOfCombinedImage}}">
+
+    <hr>
+    <!--- a go back anchor -->
+    <script>
+        var referrer = document.referrer //the source URL
+        strReferrer = `<a href="${referrer}">return to ${referrer}</a>`
+        document.write(strReferrer)
+    </script>
+</body>
+</html>

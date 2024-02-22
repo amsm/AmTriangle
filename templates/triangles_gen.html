@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App Triangles [Dataset] Generator, for playing with Machine Learning</title>
+
+    <!--
+    <script src="triangles_gen.js"></script>
+    <link rel="stylesheet" type="text/css" href="triangles_gen.css">
+    -->
+
+    <script src="{{ url_for('static', filename='triangles_gen.js') }}"></script>
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='triangles_gen.css') }}">
+    -->
+</head>
+<body>
+    <!-- for testing single triangle generation -->
+    <form
+      method="post"
+      name="nameFormTrianglesGen00"
+      id="idFormTrianglesGen00"
+      action="random_triangle_of_type_singular"
+    >
+        <label for="idSelectTriangleType">Type of triangle:</label>
+        <select id="idSelectTriangleType" name="nameSelectTriangleType">
+            <option value="acute">Acute</option>
+            <option value="obtuse">Obtuse</option>
+            <option value="right">Right (Isosceles or Scalene)</option>
+            <option value="right-isosceles">Right Isosceles</option>
+            <option value="right-scalene">Right Scalene</option>
+        </select>
+        <input type="submit" value="get a single random triangle of the selected type">
+    </form>
+
+    <hr>
+
+    <!-- for multiple triangles  generation -->
+    <form
+      method="post"
+      name="nameFormTrianglesGen01_multiple"
+      id="idFormTrianglesGen01_multiple"
+      action="random_triangles_of_type_multiple"
+    >
+    <label for="idNumberHowManyTriangles">How many random triangles do you want? </label>
+    <input
+        type="number"
+        min="1"
+        max="200"
+        value="5"
+        id="idNumberHowManyTriangles"
+        name="nameNumberHowManyTriangles">
+
+        <br>
+        <label for="idSelectTrianglesType">Type of triangles:</label>
+        <select id="idSelectTrianglesType" name="nameSelectTrianglesType">
+            <option value="acute">Acute</option>
+            <option value="obtuse">Obtuse</option>
+            <option value="right">Right (Isosceles or Scalene)</option>
+            <option value="right-isosceles">Right Isosceles</option>
+            <option value="right-scalene">Right Scalene</option>
+        </select>
+        <input type="submit" value="get a quantity of random triangles of the selected type">
+    </form>
+
+    <hr>
+
+    <!-- for testing dataset generation -->
+    <form
+      method="post"
+      name="nameFormDataset1"
+      id="idFormDataset1"
+      action="random_dataset1"
+    >
+    <label for="idNumberHowManySamplesPerClass">How many samples per class?</label>
+    <input
+        type="number"
+        min="1"
+        max="200"
+        value="4"
+        id="idNumberHowManySamplesPerClass"
+        name="nameNumberHowManySamplesPerClass">
+    <input type="submit" value="get a random triangles dataset with the specified number of samples per class">
+    </form>
+
+    <hr>
+    <section id="idSectionFeedback"></section>
+</body>
+</html>
